@@ -65,13 +65,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-```
-  git
-  node.js
-  JavaScript
-```
+In order to run this project you need: `git` and `node.js` installed on your computer.
 
 ### Setup
 
@@ -95,7 +89,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```
-  npm start
+  npm run start
 ```
 
 ### Run tests
