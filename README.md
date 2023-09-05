@@ -21,35 +21,50 @@
 
 # 📖 About the project <a name="about-project"></a>
 
-**Bookstore** is a website for all fans of books. It is a Single Page App (SPA) that allows users to:
+**Space Travelers** is a website for all fans of space exploration. It is a Single Page App (SPA) that allows users to:
 
-You will create an simplified version of it that allows you to:
+- Display a list of all available SpaceX rockets
 
-- Display a list of books
-- Add a book
-- Remove a selected book
+- The user can book a rocket and/or cancel the reservation
+
+- Display a list of current missions along with their brief description and participation status
+
+- The user can join and/or leave a mission joined earlier
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+
   <summary>Languages</summary>
+
   <ul>
+
     <li>HTML</li>
+
     <li>CSS</li>
+
     <li>React</li>
+
     <li>Redux</li>
+
   </ul>
+
 </details>
 
 ### Key Features <a name="key-features"></a>
 
 - React props and states
+
 - React components
+
 - React events
+
 - Fetch data from API
+
 - Redux
+
 - Deployment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -69,9 +84,13 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```
+
   git
+
   node.js
+
   JavaScript
+
 ```
 
 ### Setup
@@ -79,8 +98,11 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-  git clone git@github.com:thasipablo/bookstore.git
-  cd bookstore
+
+  git clone git@github.com:thasipablo/space-travelers-hub.git
+
+  cd space-travelers-hub
+
 ```
 
 ### Install
@@ -88,7 +110,9 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```
+
   npm install
+
 ```
 
 ### Usage
@@ -96,7 +120,9 @@ Install this project with:
 To run the project, execute the following command:
 
 ```
+
   npm start
+
 ```
 
 ### Run tests
@@ -104,8 +130,11 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```
+
   npx stylelint "**/*.[css,scss]"
+
   npx eslint "**/*.[js,jsx]"
+
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -115,6 +144,7 @@ To run tests, run the following command:
 👤 **Pablo Thasi**
 
 - LinkedIn: [thasipablo](https://www.linkedin.com/in/thasipablo)
+
 - GitHub: [@thasipablo](https://github.com/thasipablo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
