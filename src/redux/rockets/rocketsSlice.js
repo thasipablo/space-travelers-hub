@@ -26,15 +26,19 @@ export const rocketsSlice = createSlice({
         if (rocket.id !== action.payload) return rocket;
         return { ...rocket, reserved: true };
       });
-      console.log(newState);
+      return newState;
+    },
+    cancelRocketBooking: (state, action) => {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
+      });
       return newState;
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      return action.payload;
-    });
+    builder.addCase(fetchRockets.fulfilled, (state, action) => action.payload);
   },
 });
 
-export const { bookRocket } = rocketsSlice.actions;
+export const { bookRocket, cancelRocketBooking } = rocketsSlice.actions;

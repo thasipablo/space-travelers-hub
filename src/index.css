@@ -41,6 +41,12 @@ button {
   margin-bottom: 1rem;
 }
 
+.cancel-rocket-booking-btn {
+  color: inherit;
+  background: var(--white-three);
+  border: 2px solid #ccc;
+}
+
 .rocket-card .image {
   width: 200px;
 }
