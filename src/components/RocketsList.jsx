@@ -6,9 +6,7 @@ import RocketCard from './RocketCard';
 const RocketsList = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
-  // const rockets = rocketsData.length ? rocketsData : rocketsData.rockets;
 
-  console.log('Rockets:', rockets);
   useEffect(() => {
     dispatch(fetchRockets());
   }, []);
