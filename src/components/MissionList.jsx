@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMission } from '../redux/missions/missionsSlice';
 import MissionCard from './MissionCard';
-import '../styles/MissionList.css';
+import '../assets/styles/MissionList.css';
 
 const MissionList = () => {
   const { missionItems } = useSelector((state) => state.mission);

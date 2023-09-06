@@ -1,0 +1,22 @@
+.navbar {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#logo img {
+  width: 50px;
+}
+
+.nav-items {
+  display: flex;
+  gap: 1rem;
+}
