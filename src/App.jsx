@@ -1,15 +1,3 @@
-import MissionList from './components/MissionList';
-
-const App = () => (
-  <>
-    <header>
-      <h1>HEADER</h1>
-    </header>
-    <div className="body-container-test">
-      <MissionList />
-    </div>
-  </>
-
-);
+const App = () => <h1> Welcome to the Space Travelers Hub</h1>;
 
 export default App;
