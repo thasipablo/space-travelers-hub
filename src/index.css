@@ -51,6 +51,16 @@ button {
   font-size: 1.2rem;
 }
 
+.rocket-card .booked-badge {
+  display: inline-block;
+  padding: 0 8px;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  color: var(--white-two);
+  background-color: #048a76;
+}
+
 .rocket-card .description {
   padding-bottom: 0.8rem;
   line-height: 1.3rem;
