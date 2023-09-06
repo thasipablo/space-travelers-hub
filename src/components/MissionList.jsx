@@ -14,21 +14,24 @@ const MissionList = () => {
   }, [dispatch]);
 
   return (
-    <table border={1} className="mission-table">
-      <tr>
-        <th>Mission</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th> </th>
+    <table className="mission-table">
+      <tr className="table-heading">
+        <th className="mission-header">Mission</th>
+        <th className="description">Description</th>
+        <th className="status">Status</th>
+        <th className="join"> </th>
       </tr>
-      {missionItems.map((item) => (
-        <MissionCard
-          key={item.mission_id}
-          id={item.mission_id}
-          missionName={item.mission_name}
-          missionDescription={item.description}
-        />
-      ))}
+      <tbody>
+        {missionItems.map((item) => (
+          <MissionCard
+            key={item.mission_id}
+            id={item.mission_id}
+            missionName={item.mission_name}
+            missionDescription={item.description}
+          />
+        ))}
+      </tbody>
+
     </table>
   );
 };

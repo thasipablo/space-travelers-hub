@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../assets/styles/MissionCard.css';
 
 const MissionCard = ({ id, missionName, missionDescription }) => (
   <tr id={id}>
-    <td>{missionName}</td>
+    <td className="mission">{missionName}</td>
     <td>{missionDescription}</td>
-    <td>NOT A MEMBER</td>
-    <td>Join Mission</td>
+    <td><button type="button" disabled className="member">NOT A MEMBER</button></td>
+    <td><button type="button" className="btn-join">Join Mission</button></td>
   </tr>
 );
 

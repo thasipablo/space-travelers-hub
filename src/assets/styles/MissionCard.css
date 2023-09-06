@@ -1,0 +1,19 @@
+.member {
+  background-color: #6d757d;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.btn-join {
+  background-color: transparent;
+  color: grey;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+
+.mission {
+  font-size: 1.2rem;
+  font-weight: 700;
+}

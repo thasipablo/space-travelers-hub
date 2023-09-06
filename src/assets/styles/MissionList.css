@@ -1,4 +1,48 @@
-.mission-table {
+/* .mission-table {
   width: 100vw;
   text-align: center;
+  padding: 2rem;
+}
+
+
+tr {
+  padding: 1rem;
+  border: 1px solid grey;
+  background-color: red;
+} */
+
+.mission-table {
+  border-collapse: collapse; /* Combina los bordes de las celdas adyacentes */
+  width: 98%;
+  margin: 1rem;
+}
+
+.mission-table th,
+.mission-table td {
+  border: 1px solid lightgrey;
+  padding: 1rem;
+}
+
+.mission-table th {
+  font-size: 1.3rem;
+}
+
+.mission-table .mission-header {
+  width: 10%;
+}
+
+.mission-table .description {
+  width: auto;
+}
+
+.mission-table .status {
+  width: 13%;
+}
+
+.mission-table .join {
+  width: 12%;
+}
+
+.mission-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }
