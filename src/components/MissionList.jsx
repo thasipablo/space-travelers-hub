@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMission } from '../redux/missions/missionsSlice';
 import MissionCard from './MissionCard';
-import '../styles/MissionList.css';
+import '../assets/styles/MissionList.css';
 
 const MissionList = () => {
   const { missionItems } = useSelector((state) => state.mission);
@@ -19,7 +19,7 @@ const MissionList = () => {
         <th>Mission</th>
         <th>Description</th>
         <th>Status</th>
-        <th>   </th>
+        <th> </th>
       </tr>
       {missionItems.map((item) => (
         <MissionCard
