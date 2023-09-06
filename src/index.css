@@ -16,3 +16,42 @@ a {
   color: var(--azure);
   text-decoration: none;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  color: var(--white-two);
+  background: var(--azure);
+  border: none;
+  outline: none;
+}
+
+.rocket-card {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rocket-card .image {
+  width: 200px;
+}
+
+.rocket-card .name {
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.rocket-card .description {
+  padding-bottom: 0.8rem;
+  line-height: 1.3rem;
+}
