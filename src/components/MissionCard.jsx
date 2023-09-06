@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const MissionCard = ({ id, missionName, missionDescription }) => (
@@ -11,9 +11,9 @@ const MissionCard = ({ id, missionName, missionDescription }) => (
 );
 
 MissionCard.propTypes = {
-  id: PropTypes.string.isRequired, 
-  missionName: PropTypes.string.isRequired, 
-  missionDescription: PropTypes.string.isRequired, 
+  id: PropTypes.string.isRequired,
+  missionName: PropTypes.string.isRequired,
+  missionDescription: PropTypes.string.isRequired,
 };
 
 export default MissionCard;
