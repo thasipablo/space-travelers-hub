@@ -1,17 +1,15 @@
-import MissionList from "./components/MissionList";
+import MissionList from './components/MissionList';
 
-const App = () => {
-    return (
-        <>
-        <header>
-          <h1>HEADER</h1>
-        </header>
-        <div className="body-container-test">
-          <MissionList />
-        </div>
-        </>
-        
-    )
-}
+const App = () => (
+  <>
+    <header>
+      <h1>HEADER</h1>
+    </header>
+    <div className="body-container-test">
+      <MissionList />
+    </div>
+  </>
+
+);
 
 export default App;
