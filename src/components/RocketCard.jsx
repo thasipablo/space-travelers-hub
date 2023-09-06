@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookRocket } from '../redux/rockets/rocketsSlice';
+import { bookRocket, cancelRocketBooking } from '../redux/rockets/rocketsSlice';
 
 const RocketCard = ({ rocket }) => {
   const dispatch = useDispatch();
@@ -15,13 +15,24 @@ const RocketCard = ({ rocket }) => {
           {rocket.reserved && <div className="booked-badge">Reserved</div>}
           {rocket.description}
         </div>
-        <button
-          type="button"
-          className="reservation-btn"
-          onClick={() => dispatch(bookRocket(rocket.id))}
-        >
-          Reserve Rocket
-        </button>
+        {!rocket.reserved && (
+          <button
+            type="button"
+            className="reservation-btn"
+            onClick={() => dispatch(bookRocket(rocket.id))}
+          >
+            Reserve Rocket
+          </button>
+        )}
+        {rocket.reserved && (
+          <button
+            type="button"
+            className="cancel-rocket-booking-btn"
+            onClick={() => dispatch(cancelRocketBooking(rocket.id))}
+          >
+            Reserve Rocket
+          </button>
+        )}
       </div>
     </div>
   );
@@ -31,7 +42,7 @@ RocketCard.propTypes = {
   rocket: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    reserved: PropTypes.bool,
     description: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
