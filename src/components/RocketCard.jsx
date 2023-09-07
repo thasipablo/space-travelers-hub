@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { bookRocket, cancelRocketBooking } from '../redux/rockets/rocketsSlice';
+import { bookRocket } from '../redux/rockets/rocketsSlice';
 
 const RocketCard = ({ rocket }) => {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const RocketCard = ({ rocket }) => {
           <button
             type="button"
             className="cancel-rocket-booking-btn"
-            onClick={() => dispatch(cancelRocketBooking(rocket.id))}
+            onClick={() => dispatch(bookRocket(rocket.id))}
           >
             Cancel Reservation
           </button>
