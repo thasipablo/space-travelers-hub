@@ -1,7 +1,13 @@
-.member {
+.not-member {
   background-color: #6d757d;
   font-weight: 700;
   border-radius: 10px;
+}
+
+.member {
+    background-color: #18a2b8;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .btn-join {
@@ -11,9 +17,20 @@
   font-size: 1rem;
   border: 2px solid darkgrey;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .mission {
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+.btn-leave-mission {
+    background-color: transparent;
+    color: #dc3645;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid #dc3645;
+    border-radius: 5px;
+    cursor: pointer;
 }
