@@ -30,7 +30,7 @@ const RocketCard = ({ rocket }) => {
             className="cancel-rocket-booking-btn"
             onClick={() => dispatch(cancelRocketBooking(rocket.id))}
           >
-            Reserve Rocket
+            Cancel Reservation
           </button>
         )}
       </div>
