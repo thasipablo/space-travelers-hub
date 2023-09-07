@@ -5,21 +5,36 @@ const API_MISSION_URL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   missionItems: [],
-  loading: true,
   error: undefined,
 };
 
 export const fetchMission = createAsyncThunk('missions/fetchMissions', async () => {
   const response = await axios.get(API_MISSION_URL);
-  return response.data;
+  const mappedData = response.data.map((item) => ({
+    mission_name: item.mission_name,
+    mission_id: item.mission_id,
+    description: item.description,
+    reserved: false,
+  }));
+  return mappedData;
 });
 
 const missionsSlice = createSlice({
   name: 'mission',
   initialState,
   reducers: {
-    addMission: (state, action) => {
-      console.log(action.payload);
+    actionMission: (state, action) => {
+      const ID = action.payload;
+      const updatedMissionItems = state.missionItems.map((item) => {
+        if (item.mission_id === ID) {
+          return {
+            ...item,
+            reserved: !item.reserved,
+          };
+        }
+        return item;
+      });
+      state.missionItems = updatedMissionItems;
     },
   },
   extraReducers: (builder) => {
@@ -39,6 +54,6 @@ const missionsSlice = createSlice({
   },
 });
 
-export const { addMission } = missionsSlice.actions;
+export const { actionMission } = missionsSlice.actions;
 
 export default missionsSlice;
