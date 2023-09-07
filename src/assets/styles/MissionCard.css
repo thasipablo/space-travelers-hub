@@ -5,9 +5,9 @@
 }
 
 .member {
-    background-color: #18a2b8;
-    font-size: 1rem;
-    font-weight: 700;
+  background-color: #18a2b8;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .btn-join {
@@ -26,11 +26,11 @@
 }
 
 .btn-leave-mission {
-    background-color: transparent;
-    color: #dc3645;
-    font-weight: 700;
-    font-size: 1rem;
-    border: 2px solid #dc3645;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: transparent;
+  color: #dc3645;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid #dc3645;
+  border-radius: 5px;
+  cursor: pointer;
 }

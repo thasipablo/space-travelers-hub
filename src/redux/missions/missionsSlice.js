@@ -10,12 +10,13 @@ const initialState = {
 
 export const fetchMission = createAsyncThunk('missions/fetchMissions', async () => {
   const response = await axios.get(API_MISSION_URL);
-  return response.data.map((item) => ({
+  const mappedData = response.data.map((item) => ({
     mission_name: item.mission_name,
     mission_id: item.mission_id,
     description: item.description,
     reserved: false,
   }));
+  return mappedData;
 });
 
 const missionsSlice = createSlice({
@@ -24,11 +25,16 @@ const missionsSlice = createSlice({
   reducers: {
     actionMission: (state, action) => {
       const ID = action.payload;
-      state.missionItems.map((item) => {
+      const updatedMissionItems = state.missionItems.map((item) => {
         if (item.mission_id === ID) {
-          item.reserved = !item.reserved;
+          return {
+            ...item,
+            reserved: !item.reserved,
+          };
         }
+        return item;
       });
+      state.missionItems = updatedMissionItems;
     },
   },
   extraReducers: (builder) => {

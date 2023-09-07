@@ -9,19 +9,19 @@ const MissionCard = ({
 }) => {
   const dispatch = useDispatch();
   let join = '';
-  let class_name = '';
+  let className = '';
   let member = '';
-  let member_class = '';
+  let memberClass = '';
   if (missionReserved) {
     join = 'Leave Mission';
     member = 'Active Member';
-    class_name = 'btn-leave-mission';
-    member_class = 'member';
+    className = 'btn-leave-mission';
+    memberClass = 'member';
   } else {
     join = 'Join Mission';
-    class_name = 'btn-join';
+    className = 'btn-join';
     member = 'NOT A MEMBER';
-    member_class = 'not-member';
+    memberClass = 'not-member';
   }
 
   return (
@@ -29,8 +29,8 @@ const MissionCard = ({
       <tr id={id}>
         <td className="mission">{missionName}</td>
         <td>{missionDescription}</td>
-        <td><button type="button" disabled className={member_class}>{member}</button></td>
-        <td><button key={id} onClick={() => dispatch(actionMission(id))} type="button" className={class_name}>{join}</button></td>
+        <td><button type="button" disabled className={memberClass}>{member}</button></td>
+        <td><button key={id} onClick={() => dispatch(actionMission(id))} type="button" className={className}>{join}</button></td>
       </tr>
     </tbody>
 
