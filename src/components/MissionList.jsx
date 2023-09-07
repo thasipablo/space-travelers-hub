@@ -11,7 +11,7 @@ const MissionList = () => {
 
   useEffect(() => {
     dispatch(fetchMission());
-  }, [dispatch]);
+  }, []);
 
   return (
     <table className="mission-table">
@@ -21,16 +21,15 @@ const MissionList = () => {
         <th className="status">Status</th>
         <th className="join"> </th>
       </tr>
-      <tbody>
-        {missionItems.map((item) => (
-          <MissionCard
-            key={item.mission_id}
-            id={item.mission_id}
-            missionName={item.mission_name}
-            missionDescription={item.description}
-          />
-        ))}
-      </tbody>
+      {missionItems.map((item) => (
+        <MissionCard
+          key={item.mission_id}
+          id={item.mission_id}
+          missionName={item.mission_name}
+          missionDescription={item.description}
+          missionReserved={item.reserved}
+        />
+      ))}
 
     </table>
   );
