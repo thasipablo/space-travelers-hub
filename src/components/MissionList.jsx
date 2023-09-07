@@ -5,13 +5,15 @@ import MissionCard from './MissionCard';
 import '../assets/styles/MissionList.css';
 
 const MissionList = () => {
-  const { missionItems } = useSelector((state) => state.mission);
+  const { missionItems, missionsUpdated } = useSelector((state) => state.mission);
+
+  const displayMission = missionsUpdated.length === 0 ? missionItems : missionsUpdated;
 
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(fetchMission());
-  }, []);
+  }, [dispatch]);
 
   return (
     <table className="mission-table">
@@ -22,7 +24,7 @@ const MissionList = () => {
         <th className="join"> </th>
       </tr>
       <tbody>
-        {missionItems.map((item) => (
+        {displayMission.map((item) => (
         <MissionCard
           key={item.mission_id}
           id={item.mission_id}
