@@ -24,7 +24,9 @@ const Profile = () => {
             </li>
           )}
           {bookedRockets.map((rocket) => (
-            <li className="mission-item">{rocket.name}</li>
+            <li key={rocket.id} className="mission-item">
+              {rocket.name}
+            </li>
           ))}
         </ul>
       </div>
@@ -39,7 +41,9 @@ const Profile = () => {
             </>
           )}
           {bookedRockets.map((rocket) => (
-            <li className="rocket-item">{rocket.name}</li>
+            <li key={rocket.id} className="rocket-item">
+              {rocket.name}
+            </li>
           ))}
         </ul>
       </div>
