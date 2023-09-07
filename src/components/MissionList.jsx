@@ -21,7 +21,8 @@ const MissionList = () => {
         <th className="status">Status</th>
         <th className="join"> </th>
       </tr>
-      {missionItems.map((item) => (
+      <tbody>
+        {missionItems.map((item) => (
         <MissionCard
           key={item.mission_id}
           id={item.mission_id}
@@ -29,7 +30,9 @@ const MissionList = () => {
           missionDescription={item.description}
           missionReserved={item.reserved}
         />
-      ))}
+        ))}
+      </tbody>
+      
 
     </table>
   );

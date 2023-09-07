@@ -5,6 +5,7 @@ const API_MISSION_URL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   missionItems: [],
+  missionsUpdated: [],
   error: undefined,
 };
 
@@ -35,20 +36,19 @@ const missionsSlice = createSlice({
         return item;
       });
       state.missionItems = updatedMissionItems;
+      
+      state.missionsUpdated = updatedMissionItems
+      console.log(state.missionsUpdated);
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchMission.pending, (state) => {
-        state.loading = true;
-        state.error = undefined;
-      })
       .addCase(fetchMission.fulfilled, (state, action) => {
         const dataFromAPI = action.payload;
         state.missionItems = dataFromAPI;
+        console.log(state.missionsUpdated);
       })
       .addCase(fetchMission.rejected, (state, action) => {
-        state.loading = false;
         state.error = action.error.message;
       });
   },
