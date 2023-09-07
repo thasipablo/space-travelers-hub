@@ -4,22 +4,24 @@ import '../assets/styles/MissionCard.css';
 import { useDispatch } from 'react-redux';
 import { actionMission } from '../redux/missions/missionsSlice';
 
-const MissionCard = ({ id, missionName, missionDescription, missionReserved }) => {
+const MissionCard = ({
+  id, missionName, missionDescription, missionReserved,
+}) => {
   const dispatch = useDispatch();
-  let join = ''
-  let class_name = ''
-  let member= ''
-  let member_class= ''
+  let join = '';
+  let class_name = '';
+  let member = '';
+  let member_class = '';
   if (missionReserved) {
-    join = 'Leave Mission'
-    member = 'Active Member'
-    class_name = "btn-leave-mission"  
-    member_class = "member"
+    join = 'Leave Mission';
+    member = 'Active Member';
+    class_name = 'btn-leave-mission';
+    member_class = 'member';
   } else {
-    join = 'Join Mission'
-    class_name = "btn-join"
-    member = 'NOT A MEMBER'
-    member_class = 'not-member'
+    join = 'Join Mission';
+    class_name = 'btn-join';
+    member = 'NOT A MEMBER';
+    member_class = 'not-member';
   }
 
   return (
@@ -31,15 +33,15 @@ const MissionCard = ({ id, missionName, missionDescription, missionReserved }) =
         <td><button key={id} onClick={() => dispatch(actionMission(id))} type="button" className={class_name}>{join}</button></td>
       </tr>
     </tbody>
-  
-  )
-}
+
+  );
+};
 
 MissionCard.propTypes = {
   id: PropTypes.string.isRequired,
   missionName: PropTypes.string.isRequired,
   missionDescription: PropTypes.string.isRequired,
-  missionReserved: PropTypes.bool.isRequired
+  missionReserved: PropTypes.bool.isRequired,
 };
 
 export default MissionCard;

@@ -15,7 +15,7 @@ export const fetchMission = createAsyncThunk('missions/fetchMissions', async () 
     mission_id: item.mission_id,
     description: item.description,
     reserved: false,
-  }))
+  }));
 });
 
 const missionsSlice = createSlice({
@@ -23,13 +23,12 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     actionMission: (state, action) => {
-      const ID = action.payload
+      const ID = action.payload;
       state.missionItems.map((item) => {
-        if(item.mission_id === ID) {
-          item.reserved = !item.reserved
+        if (item.mission_id === ID) {
+          item.reserved = !item.reserved;
         }
       });
-      
     },
   },
   extraReducers: (builder) => {
