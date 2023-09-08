@@ -38,25 +38,21 @@ describe('Pruebas para el componente MissionList', () => {
     const { container } = render(
       <Provider store={store}>
         <MissionList />
-      </Provider>
+      </Provider>,
     );
     expect(container).toBeDefined();
   });
-
 
   it('debería mostrar la información correcta en las filas', async () => {
     render(
       <Provider store={store}>
         <MissionList />
-      </Provider>
+      </Provider>,
     );
 
     // Espera hasta que se muestren las filas en la pantalla
     await waitFor(() => {
-      const missionRows = screen.getAllByRole('row');
-      
       expect(screen.getByText('Mission 1').textContent).toBe('Mission 1');
-      
     });
   });
 });

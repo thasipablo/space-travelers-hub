@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import MissionCard from '../components/MissionCard';
+import MissionCard from './MissionCard';
 import { actionMission } from '../redux/missions/missionsSlice';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -28,7 +28,7 @@ describe('MissionCard Component', () => {
           missionDescription="Description 1"
           missionReserved={false}
         />
-      </Provider>
+      </Provider>,
     );
 
     expect(screen.getByText('Mission 1')).toBeInTheDocument();
@@ -45,7 +45,7 @@ describe('MissionCard Component', () => {
           missionDescription="Description 1"
           missionReserved={false}
         />
-      </Provider>
+      </Provider>,
     );
 
     const joinButton = screen.getByText('Join Mission');

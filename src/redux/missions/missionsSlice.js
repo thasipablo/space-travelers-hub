@@ -25,10 +25,9 @@ export const fetchMission = createAsyncThunk('missions/fetchMissions', async () 
 
     return mappedData;
   } catch (error) {
-    throw new Error('Hubo un error al obtener los datos de la misión: ' + error.message);
+    throw new Error(`Hubo un error al obtener los datos de la misión: ${error.message}`);
   }
 });
-
 
 const missionsSlice = createSlice({
   name: 'mission',
