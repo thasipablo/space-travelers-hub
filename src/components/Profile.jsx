@@ -5,19 +5,22 @@ const Profile = () => {
   const rockets = useSelector((state) => state.rocket.rockets);
   const bookedRockets = rockets.filter((rocket) => rocket.reserved);
 
+  const missions = useSelector((state) => state.mission.missionItems);
+  const reservedMissions = missions.filter((mission) => mission.reserved);
+
   return (
     <div className="profile">
       <div className="missions">
         <h2>My Missions</h2>
         <ul className="mission-items">
-          {!bookedRockets.length && (
+          {!reservedMissions.length && (
             <li className="mission-item">
               You participate to any mission yet.
             </li>
           )}
-          {bookedRockets.map((rocket) => (
-            <li key={rocket.id} className="mission-item">
-              {rocket.name}
+          {reservedMissions.map((mission) => (
+            <li key={mission.mission_id} className="mission-item">
+              {mission.mission_name}
             </li>
           ))}
         </ul>

@@ -25,14 +25,12 @@ const MissionCard = ({
   }
 
   return (
-    <tbody>
-      <tr id={id}>
-        <td className="mission">{missionName}</td>
-        <td>{missionDescription}</td>
-        <td><button type="button" disabled className={memberClass}>{member}</button></td>
-        <td><button key={id} onClick={() => dispatch(actionMission(id))} type="button" className={className}>{join}</button></td>
-      </tr>
-    </tbody>
+    <tr id={id}>
+      <td className="mission">{missionName}</td>
+      <td>{missionDescription}</td>
+      <td><button type="button" disabled className={memberClass}>{member}</button></td>
+      <td><button key={id} onClick={() => dispatch(actionMission(id))} type="button" className={className}>{join}</button></td>
+    </tr>
 
   );
 };

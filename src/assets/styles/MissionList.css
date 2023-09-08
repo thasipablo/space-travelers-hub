@@ -1,5 +1,5 @@
 .mission-table {
-  border-collapse: collapse; /* Combina los bordes de las celdas adyacentes */
+  border-collapse: collapse;
   width: 98%;
   margin: 1rem;
 }
