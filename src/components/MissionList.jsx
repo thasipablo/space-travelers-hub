@@ -3,7 +3,7 @@ import '../assets/styles/MissionList.css';
 import MissionCard from './MissionCard';
 
 const MissionList = () => {
-  const { missionItems } = useSelector((state) => state.mission)
+  const { missionItems } = useSelector((state) => state.mission);
 
   return (
     <table className="mission-table">
@@ -15,16 +15,15 @@ const MissionList = () => {
       </tr>
       <tbody>
         {missionItems.map((item) => (
-        <MissionCard
-          key={item.mission_id}
-          id={item.mission_id}
-          missionName={item.mission_name}
-          missionDescription={item.description}
-          missionReserved={item.reserved}
-        />
+          <MissionCard
+            key={item.mission_id}
+            id={item.mission_id}
+            missionName={item.mission_name}
+            missionDescription={item.description}
+            missionReserved={item.reserved}
+          />
         ))}
       </tbody>
-      
 
     </table>
   );

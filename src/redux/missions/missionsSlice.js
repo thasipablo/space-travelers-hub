@@ -10,7 +10,7 @@ const initialState = {
 
 export const fetchMission = createAsyncThunk('missions/fetchMissions', async () => {
   const response = await axios.get(API_MISSION_URL);
-  return response.data
+  return response.data;
 });
 
 const missionsSlice = createSlice({
@@ -28,7 +28,7 @@ const missionsSlice = createSlice({
         }
         return item;
       });
-      return {...state, missionItems: updatedMissionItems};
+      return { ...state, missionItems: updatedMissionItems };
     },
   },
   extraReducers: (builder) => {
