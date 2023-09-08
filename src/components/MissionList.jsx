@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMission } from '../redux/missions/missionsSlice';
-import MissionCard from './MissionCard';
+import { useSelector } from 'react-redux';
 import '../assets/styles/MissionList.css';
+import MissionCard from './MissionCard';
 
 const MissionList = () => {
-  const { missionItems, missionsUpdated } = useSelector((state) => state.mission);
-
-  const displayMission = missionsUpdated.length === 0 ? missionItems : missionsUpdated;
-
-  const dispatch = useDispatch();
-  
-  useEffect(() => {
-    dispatch(fetchMission());
-  }, [dispatch]);
+  const { missionItems } = useSelector((state) => state.mission)
 
   return (
     <table className="mission-table">
@@ -24,7 +14,7 @@ const MissionList = () => {
         <th className="join"> </th>
       </tr>
       <tbody>
-        {displayMission.map((item) => (
+        {missionItems.map((item) => (
         <MissionCard
           key={item.mission_id}
           id={item.mission_id}
