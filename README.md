@@ -99,6 +99,8 @@ To run tests, run the following command:
 ```
   npx stylelint "**/*.[css,scss]"
   npx eslint "**/*.[js,jsx]"
+
+  npm test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -109,6 +111,11 @@ To run tests, run the following command:
 
 - LinkedIn: [thasipablo](https://www.linkedin.com/in/thasipablo)
 - GitHub: [@thasipablo](https://github.com/thasipablo)
+
+👤 **Cesar Ulises Cappa**
+
+- LinkedIn: [Cesar Ulises Cappa](https://www.linkedin.com/in/cesar-ulises-cappa-subelza/)
+- GitHub: [@ulises2607](https://github.com/ulises2607)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

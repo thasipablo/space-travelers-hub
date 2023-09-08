@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const API_MISSION_URL = 'https://api.spacexdata.com/v3/missions';
 
@@ -9,14 +8,25 @@ const initialState = {
 };
 
 export const fetchMission = createAsyncThunk('missions/fetchMissions', async () => {
-  const response = await axios.get(API_MISSION_URL);
-  const mappedData = response.data.map((item) => ({
-    mission_name: item.mission_name,
-    mission_id: item.mission_id,
-    description: item.description,
-    reserved: false,
-  }));
-  return mappedData;
+  try {
+    const response = await fetch(API_MISSION_URL);
+
+    if (!response.ok) {
+      throw new Error('La solicitud no pudo completarse.');
+    }
+
+    const data = await response.json();
+    const mappedData = data.map((item) => ({
+      mission_name: item.mission_name,
+      mission_id: item.mission_id,
+      description: item.description,
+      reserved: false,
+    }));
+
+    return mappedData;
+  } catch (error) {
+    throw new Error(`Hubo un error al obtener los datos de la misión: ${error.message}`);
+  }
 });
 
 const missionsSlice = createSlice({
